@@ -1,4 +1,4 @@
-// import { useState } from 'react'
+import { useState } from 'react'
 import {
   Form,
   Label,
@@ -8,14 +8,34 @@ import {
   Button,
 } from './todo-form.styled'
 export const ToDoForm = () => {
-  // const [name, setName] = useState('')
+  const [task, setTask] = useState('')
+
+  const handleSubmit = (event) => {
+    event.preventDefault()
+    // onSubmit({ task })
+    resetForm()
+  }
+
+  const handleNameChange = (event) => {
+    setTask(event.target.value)
+  }
+
+  const resetForm = () => {
+    setTask('')
+  }
+
   return (
     <>
       <Container>
         <Title>Create task</Title>
-        <Form>
+        <Form onSubmit={handleSubmit}>
           <Label>
-            <Input />
+            <Input
+              type="text"
+              name="task"
+              value={task}
+              onChange={handleNameChange}
+            />
           </Label>
           <Button>Add task</Button>
         </Form>
