@@ -19,7 +19,7 @@ export const addTask = createAsyncThunk(
   'tasks/addTask',
   async (text, thunkAPI) => {
     try {
-      const response = await axios.post('/task', { text })
+      const response = await axios.post('/task', { 'task': text })
       return response.data
     } catch (error) {
       return thunkAPI.rejectWithValue(error.message)
