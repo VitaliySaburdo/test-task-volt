@@ -1,5 +1,5 @@
 import { StyledContainer } from './container.styled'
 
-export function Container(props) {
+export const Container = (props) => {
   return <StyledContainer {...props} />
 }

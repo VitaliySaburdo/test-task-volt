@@ -1,5 +1,5 @@
 // import { useState } from 'react'
-export function ToDoForm() {
+export const ToDoForm = () => {
   // const [name, setName] = useState('')
   return (
     <form>
