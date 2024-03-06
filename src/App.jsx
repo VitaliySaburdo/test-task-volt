@@ -18,8 +18,8 @@ function App() {
         <main>
           <Section>
             <Container>
-              <ToDoForm onSubmit={formSubmitHandler}/>
-              <ToDoList tasks={ tasks }/>
+              <ToDoForm onSubmit={formSubmitHandler} />
+              <ToDoList tasks={tasks} />
             </Container>
           </Section>
         </main>
