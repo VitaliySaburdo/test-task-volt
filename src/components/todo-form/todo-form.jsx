@@ -1,5 +1,5 @@
-/* eslint-disable react/prop-types */
-import { useState } from 'react'
+import { useDispatch } from 'react-redux'
+import { addTask } from '../../redux/operations'
 import {
   Form,
   Container,
@@ -7,21 +7,13 @@ import {
   Input,
   Button,
 } from './todo-form.styled'
-export const ToDoForm = ({ onSubmit }) => {
-  const [task, setTask] = useState('')
+export const ToDoForm = () => {
+  const dispatch = useDispatch()
 
   const handleSubmit = (event) => {
-    event.preventDefault()
-    onSubmit({ task })
-    resetForm()
-  }
-
-  const handleNameChange = (event) => {
-    setTask(event.target.value)
-  }
-
-  const resetForm = () => {
-    setTask('')
+    const form = event.target
+    dispatch(addTask(event.target.elements.text.value))
+    form.reset()
   }
 
   return (
@@ -31,9 +23,8 @@ export const ToDoForm = ({ onSubmit }) => {
         <Form onSubmit={handleSubmit}>
             <Input
               type="text"
-              name="task"
-              value={task}
-              onChange={handleNameChange}
+              name="text"
+              placeholder="Enter task text..."
             />
           <Button>Add task</Button>
         </Form>
