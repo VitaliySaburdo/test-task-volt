@@ -1,16 +1,21 @@
+import { useEffect } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+import { selectError, selectIsLoading } from './redux/selectors'
+import { fetchTasks } from './redux/operations'
 import { ThemeProvider } from 'styled-components'
 import { theme } from './theme/theme'
 import { ToDoForm } from './components/todo-form/todo-form'
 import { Container } from './components/container/container'
 import { Section } from './components/section/section'
-import { useState } from 'react'
 import { ToDoList } from './components/todo-list/todo-list'
 function App() {
-  const [tasks, setTasks] = useState([])
+  const dispatch = useDispatch()
+  const isLoading = useSelector(selectIsLoading)
+  const error = useSelector(selectError)
 
-  const formSubmitHandler = ({ task }) => {
-    setTasks([...tasks, task])
-  }
+  useEffect(() => {
+    dispatch(fetchTasks())
+  }, [dispatch])
 
   return (
     <>
@@ -18,8 +23,9 @@ function App() {
         <main>
           <Section>
             <Container>
-              <ToDoForm onSubmit={formSubmitHandler} />
-              <ToDoList tasks={tasks} />
+              <ToDoForm />
+              {isLoading && !error && <b>Request in progress...</b>}
+              <ToDoList />
             </Container>
           </Section>
         </main>

@@ -6,7 +6,7 @@ export const ToDoForm = () => {
 
   const handleSubmit = (event) => {
     const form = event.target
-    dispatch(addTask({ task: event.target.elements.text.value }))
+    dispatch(addTask({ 'task': event.target.elements.text.value }))
     form.reset()
   }
 
