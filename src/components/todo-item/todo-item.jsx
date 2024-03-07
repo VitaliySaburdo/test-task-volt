@@ -15,7 +15,7 @@ export const Task = ({ task }) => {
         checked={task.completed}
         onChange={handleToggle}
       />
-      <p>{task.task}</p>
+      <p>{task.text}</p>
       <button onClick={handleDelete}>
         X
       </button>
