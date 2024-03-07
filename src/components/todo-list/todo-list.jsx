@@ -1,9 +1,9 @@
 import { useSelector } from 'react-redux'
-import { selectTasks } from '../../redux/selectors'
+import { selectVisibleTasks } from '../../redux/selectors'
 import { Task } from '../todo-item/todo-item'
 import { List } from './todo-list.styled'
 export const ToDoList = () => {
-  const tasks = useSelector(selectTasks)
+  const tasks = useSelector(selectVisibleTasks)
   return (
     <>
       <List>

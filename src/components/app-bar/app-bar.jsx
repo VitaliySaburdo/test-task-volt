@@ -1,5 +1,5 @@
-import { StatusFilter } from 'components/StatusFilter/StatusFilter'
-import { TaskCounter } from 'components/TaskCounter/TaskCounter'
+import { StatusFilter } from '../status-filter/status-filter'
+import { TaskCounter } from '../task-counter/task-counter'
 
 export const AppBar = () => {
   return (
