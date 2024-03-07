@@ -1,6 +1,8 @@
 import { useDispatch } from 'react-redux'
 import { addTask } from '../../redux/operations'
-import { Form, Container, Title, Input, Button } from './todo-form.styled'
+import { Form, Container, Input } from './todo-form.styled'
+import { Title } from '../title/title'
+import { MuiButton } from '../button/button'
 export const ToDoForm = () => {
   const dispatch = useDispatch()
 
@@ -17,7 +19,7 @@ export const ToDoForm = () => {
         <Title>Create task</Title>
         <Form onSubmit={handleSubmit}>
           <Input type="text" name="text" placeholder="Enter task text..." />
-          <Button>Add task</Button>
+          <MuiButton type='submit' variant="contained">Add task</MuiButton>
         </Form>
       </Container>
     </>
