@@ -30,27 +30,27 @@ const tasksSlice = createSlice({
       .addCase(addTask.fulfilled, (state, action) => {
         state.isLoading = false
         state.error = undefined
-        state.items.push(action.payload)
+        state.taskItems.push(action.payload)
       })
       .addCase(addTask.rejected, handleRejected)
       .addCase(deleteTask.pending, handlePending)
       .addCase(deleteTask.fulfilled, (state, action) => {
         state.isLoading = false
         state.error = undefined
-        const index = state.items.findIndex(
+        const index = state.taskItems.findIndex(
           (task) => task.id === action.payload.id,
         )
-        state.items.splice(index, 1)
+        state.taskItems.splice(index, 1)
       })
       .addCase(deleteTask.rejected, handleRejected)
       .addCase(toggleCompleted.pending, handlePending)
       .addCase(toggleCompleted.fulfilled, (state, action) => {
         state.isLoading = false
         state.error = undefined
-        const index = state.items.findIndex(
+        const index = state.taskItems.findIndex(
           (task) => task.id === action.payload.id,
         )
-        state.items.splice(index, 1, action.payload)
+        state.taskItems.splice(index, 1, action.payload)
       })
       .addCase(toggleCompleted.rejected, handleRejected)
   },
