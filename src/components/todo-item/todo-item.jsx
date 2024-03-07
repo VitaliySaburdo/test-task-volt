@@ -1,6 +1,5 @@
 import { useDispatch } from 'react-redux'
-import { MdClose } from 'react-icons/md'
-import { deleteTask, toggleCompleted } from 'redux/operations'
+import { deleteTask, toggleCompleted } from '../../redux/operations'
 
 export const Task = ({ task }) => {
   const dispatch = useDispatch()
@@ -16,9 +15,9 @@ export const Task = ({ task }) => {
         checked={task.completed}
         onChange={handleToggle}
       />
-      <p>{task.text}</p>
+      <p>{task.task}</p>
       <button onClick={handleDelete}>
-        <MdClose size={24} />
+        X
       </button>
     </div>
   )
