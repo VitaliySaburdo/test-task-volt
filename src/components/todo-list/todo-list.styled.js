@@ -4,6 +4,7 @@ export const List = styled.li`
 display: flex;
 flex-direction: column;
 align-items: center;
+gap: 10px;
 `
 
 export const Button = styled.button`
