@@ -19,7 +19,11 @@ export const ToDoForm = () => {
         <Title>Create task</Title>
         <Form onSubmit={handleSubmit}>
           <Input type="text" name="text" placeholder="Enter task text..." />
-          <MuiButton type='submit' variant="contained">Add task</MuiButton>
+          <div style={{ textAlign: 'center' }}>
+            <MuiButton type="submit" variant="contained" sx={{ mt: 2 }}>
+              Add task
+            </MuiButton>
+          </div>
         </Form>
       </Container>
     </>

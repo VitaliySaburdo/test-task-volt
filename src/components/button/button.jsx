@@ -1,9 +1,9 @@
-import {StyledButton} from './button.styled';
+import Button from '@mui/material/Button'
 
 export const MuiButton = ({ children, ...props }) => {
   return (
     <>
-      <StyledButton {...props}>{children}</StyledButton>
+      <Button {...props}>{children}</Button>
     </>
   )
 }
