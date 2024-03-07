@@ -1,13 +1,9 @@
 import styled from 'styled-components'
 
-export const Item = styled.li`
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 10px;
-  align-items: center;
-  &:last-child {
-    margin-bottom: 0;
-  }
+export const List = styled.li`
+display: flex;
+flex-direction: column;
+align-items: center;
 `
 
 export const Button = styled.button`
