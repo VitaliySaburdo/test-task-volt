@@ -1,6 +1,8 @@
 import { useDispatch } from 'react-redux'
 import { deleteTask, toggleCompleted } from '../../redux/operations'
 import { Item } from './todo-item.styled'
+import { MuiButton } from '../button/button'
+import DeleteIcon from '@mui/icons-material/Delete'
 
 export const Task = ({ task }) => {
   const dispatch = useDispatch()
@@ -13,7 +15,8 @@ export const Task = ({ task }) => {
     <Item>
       <input type="checkbox" checked={task.completed} onChange={handleToggle} />
       <p>{task.text}</p>
-      <button onClick={handleDelete}>X</button>
+      <MuiButton color='error' startIcon={<DeleteIcon />} onClick={handleDelete}>Delete</MuiButton>
     </Item>
   )
 }
+ 
