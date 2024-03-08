@@ -3,6 +3,7 @@ import { deleteTask, toggleCompleted } from '../../redux/operations'
 import { Item } from './todo-item.styled'
 import { MuiButton } from '../button/button'
 import DeleteIcon from '@mui/icons-material/Delete'
+import Checkbox from '@mui/material/Checkbox'
 
 export const Task = ({ task }) => {
   const dispatch = useDispatch()
@@ -13,10 +14,19 @@ export const Task = ({ task }) => {
 
   return (
     <Item>
-      <input type="checkbox" checked={task.completed} onChange={handleToggle} />
+      <Checkbox
+        checked={task.completed}
+        onChange={handleToggle}
+        sx={{ '& .MuiSvgIcon-root': { fontSize: 28 } }}
+      />
       <p>{task.text}</p>
-      <MuiButton color='error' startIcon={<DeleteIcon />} onClick={handleDelete}>Delete</MuiButton>
+      <MuiButton
+        color="error"
+        startIcon={<DeleteIcon />}
+        onClick={handleDelete}
+      >
+        Delete
+      </MuiButton>
     </Item>
   )
 }
- 
