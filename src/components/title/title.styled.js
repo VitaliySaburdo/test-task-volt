@@ -7,4 +7,5 @@ export const Name = styled.h2`
   font-weight: 700;
   font-size: 28px;
   color: #455a64;
+  margin-bottom: 20px;
 `

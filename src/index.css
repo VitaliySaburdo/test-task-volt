@@ -7,7 +7,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: linear-gradient(112deg, #f3f3f3 0.74%, #ffffff 60%);
+  background: linear-gradient(to right, #e5eff7, #d3e7fe);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;

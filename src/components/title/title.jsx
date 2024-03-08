@@ -1,7 +1,9 @@
-import {Name} from './title.styled';
+import { Name } from './title.styled'
 
 export const Title = ({ children }) => {
-    return <>
-        <Name>{ children }</Name>
+  return (
+    <>
+      <Name>{children}</Name>
     </>
+  )
 }
