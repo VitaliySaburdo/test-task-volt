@@ -8,7 +8,7 @@ import { ToDoForm } from './components/todo-form/todo-form'
 import { Container } from './components/container/container'
 import { Section } from './components/section/section'
 import { ToDoList } from './components/todo-list/todo-list'
-import { AppBar } from './components/app-bar/app-bar'
+import { Header } from './components/header/header'
 function App() {
   const dispatch = useDispatch()
   const isLoading = useSelector(selectIsLoading)
@@ -21,7 +21,7 @@ function App() {
   return (
     <>
       <ThemeProvider theme={theme}>
-        <AppBar/>
+        <Header/>
         <main>
           <Section>
             <Container>
