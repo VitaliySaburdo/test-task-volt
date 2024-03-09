@@ -7,11 +7,15 @@ export const ToDoList = () => {
   return (
     <>
       <List>
-        {tasks.map((task, index) => (
-          <li key={index}>
-            <Task task={task} />
-          </li>
-        ))}
+        {tasks.length ? (
+          tasks.map((task, index) => (
+            <li key={index}>
+              <Task task={task} />
+            </li>
+          ))
+        ) : (
+          <h5>You don`t have any task</h5>
+        )}
       </List>
     </>
   )

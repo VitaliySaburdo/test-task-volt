@@ -15,7 +15,7 @@ export const ToDoForm = () => {
       .string()
       .required('Text is required')
       .min(6, 'Text should be of minimum 6 characters length')
-      .max(20, 'Text should be of maximum 30 characters length'),
+      .max(30, 'Text should be of maximum 30 characters length'),
   })
 
   const initialValues = {
