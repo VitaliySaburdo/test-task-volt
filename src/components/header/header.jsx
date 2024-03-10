@@ -1,23 +1,24 @@
 import { AppBar, Grid, Toolbar, Typography } from '@mui/material'
 import { StatusFilter } from '../status-filter/status-filter'
 import { TaskCounter } from '../task-counter/task-counter'
+import { Container } from '../container/container'
 
 export const Header = () => {
   return (
     <header>
       <AppBar position="static">
+        <Container>
         <Toolbar>
-          <Grid container spacing={2}>
-            <Grid item xs={2}>
-              <Typography variant="h6">Tasks counter</Typography>
+          <Grid container justifyContent="space-between">
+            <Grid item>
               <TaskCounter />
             </Grid>
-            <Grid item xs={2}>
-              <Typography variant="h6">Filter by status</Typography>
+            <Grid item>
               <StatusFilter />
             </Grid>
           </Grid>
-        </Toolbar>
+          </Toolbar>
+          </Container>
       </AppBar>
     </header>
   )
