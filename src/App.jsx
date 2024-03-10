@@ -10,7 +10,7 @@ import { Section } from './components/section/section'
 import { ToDoList } from './components/todo-list/todo-list'
 import { Header } from './components/header/header'
 import { Loader } from './components/loader/loader'
-import { Title } from './components/title/title'
+
 function App() {
   const dispatch = useDispatch()
   const isLoading = useSelector(selectIsLoading)
