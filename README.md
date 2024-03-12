@@ -8,10 +8,6 @@
 
 This application helps to schedule the user's tasks. The application allows you to create\delete tasks and mark tasks as completed. The application provides filtering by task status: active, completed, and all tasks. The header contains a task counter to make it convenient for the user to track tasks.
 
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
 ## Available Scripts
 
 In the project directory, you can run:
@@ -33,5 +29,16 @@ It correctly bundles React in production mode and optimizes the build for the be
 The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Technologies
+The following libraries and technologies are used in the project:
+
+react
+react-redux
+reduxjs/toolkit
+react-loader-spinner
+axios
+styled-components
+mui/material
+formik
+yup
 
