@@ -11,7 +11,7 @@ export const ToDoForm = () => {
   const dispatch = useDispatch()
 
   const validationSchema = yup.object({
-    text: yup
+    'text': yup
       .string()
       .required('Text is required')
       .min(6, 'Text should be of minimum 6 characters length')
@@ -19,7 +19,7 @@ export const ToDoForm = () => {
   })
 
   const initialValues = {
-    text: '',
+    'text': '',
   }
 
   const handleSubmit = (formValues, { resetForm }) => {
@@ -44,7 +44,7 @@ export const ToDoForm = () => {
               label="Enter task text..."
               size="small"
               fullWidth
-              sx={{ width: '400px' }}
+              sx={{ 'width': '400px' }}
               error={dirty && !isValid}
             />
             <ErrorMessage
@@ -52,11 +52,11 @@ export const ToDoForm = () => {
               component="div"
               style={{ textAlign: 'center', color: 'red', fontSize: '12px' }}
             />
-            <div style={{ textAlign: 'center' }}>
+            <div style={{ 'textAlign': 'center' }}>
               <MuiButton
                 type="submit"
                 variant="contained"
-                sx={{ mt: 2 }}
+                sx={{ 'mt': 2 }}
                 disabled={!dirty || !isValid}
               >
                 Add task
