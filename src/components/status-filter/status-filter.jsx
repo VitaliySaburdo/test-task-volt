@@ -11,6 +11,7 @@ export const StatusFilter = () => {
   const dispatch = useDispatch()
   const filter = useSelector(selectStatusFilter)
 
+  // eslint-disable-next-line max-len
   const handleFilterChange = (statusFilter) => dispatch(setStatusFilter(statusFilter))
 
   return (

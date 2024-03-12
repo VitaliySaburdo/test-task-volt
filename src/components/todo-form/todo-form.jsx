@@ -50,6 +50,7 @@ export const ToDoForm = () => {
             <ErrorMessage
               name="text"
               component="div"
+              // eslint-disable-next-line max-len
               style={{ 'textAlign': 'center', 'color': 'red', 'fontSize': '12px' }}
             />
             <div style={{ 'textAlign': 'center' }}>
