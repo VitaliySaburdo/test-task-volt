@@ -7,7 +7,7 @@ export const ToDoList = () => {
   return (
     <>
       <List>
-        {tasks.length ? (
+        {tasks.length > 0 ? (
           tasks.map((task, index) => (
             <li key={index}>
               <Task task={task} />
