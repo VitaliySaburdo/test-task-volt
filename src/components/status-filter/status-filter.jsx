@@ -11,21 +11,21 @@ export const StatusFilter = () => {
   const dispatch = useDispatch()
   const filter = useSelector(selectStatusFilter)
 
-  const handleFilterChange = (filter) => dispatch(setStatusFilter(filter))
+  const handleFilterChange = (statusFilter) => dispatch(setStatusFilter(statusFilter))
 
   return (
     <Box
       sx={{
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
+        'display': 'flex',
+        'flexDirection': 'column',
+        'alignItems': 'center',
         '& > *': {
-          m: 1,
+          'm': 1,
         },
       }}
     >
       <Typography variant="h6">Filter by status</Typography>
-      <div style={{ display: 'flex' }}>
+      <div style={{ 'display': 'flex' }}>
         <ButtonGroup variant="contained" aria-label="Basic button group">
           <Button
             selected={filter === statusFilters.all}

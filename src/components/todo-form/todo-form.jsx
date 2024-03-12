@@ -50,7 +50,7 @@ export const ToDoForm = () => {
             <ErrorMessage
               name="text"
               component="div"
-              style={{ textAlign: 'center', color: 'red', fontSize: '12px' }}
+              style={{ 'textAlign': 'center', 'color': 'red', 'fontSize': '12px' }}
             />
             <div style={{ 'textAlign': 'center' }}>
               <MuiButton

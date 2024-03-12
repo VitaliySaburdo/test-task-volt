@@ -1,7 +1,7 @@
 {
   "semi": false,
   "singleQuote": true,
-  "printWidth": 80,
+  "printWidth": 70,
   "quoteProps": "as-needed",
   "plugins": ["prettier-plugin-jsx"],
   "jsxSingleQuote": false
