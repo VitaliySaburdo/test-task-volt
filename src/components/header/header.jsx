@@ -1,4 +1,4 @@
-import { AppBar, Grid, Toolbar, Typography } from '@mui/material'
+import { AppBar, Grid, Toolbar } from '@mui/material'
 import { StatusFilter } from '../status-filter/status-filter'
 import { TaskCounter } from '../task-counter/task-counter'
 import { Container } from '../container/container'
