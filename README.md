@@ -44,4 +44,4 @@ The following libraries and technologies are used in the project:
 
 ## Backend
 
-This application uses a backend mockapi.io
+This application uses a backend mockapi.io https://mockapi.io/projects
