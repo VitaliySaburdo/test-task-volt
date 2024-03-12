@@ -5,7 +5,6 @@ import { fetchTasks } from './redux/operations'
 import { ThemeProvider } from 'styled-components'
 import { theme } from './theme/theme'
 import { ToDoForm } from './components/todo-form/todo-form'
-import { Container } from './components/container/container'
 import { Section } from './components/section/section'
 import { ToDoList } from './components/todo-list/todo-list'
 import { Header } from './components/header/header'
@@ -26,12 +25,12 @@ function App() {
         <Header/>
         <main>
           <Section>
-            <Container>
+            <>
               <h1 style={{textAlign: 'center'}}>TODO APP</h1>
               <ToDoForm />
               {isLoading && !error && <Loader/>}
               <ToDoList />
-            </Container>
+            </>
           </Section>
         </main>
       </ThemeProvider>

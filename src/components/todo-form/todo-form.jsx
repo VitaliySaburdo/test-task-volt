@@ -22,8 +22,8 @@ export const ToDoForm = () => {
     text: '',
   }
 
-  const handleSubmit = (values, { resetForm }) => {
-    dispatch(addTask(values.text))
+  const handleSubmit = (formValues, { resetForm }) => {
+    dispatch(addTask(formValues.text))
     resetForm()
   }
 
