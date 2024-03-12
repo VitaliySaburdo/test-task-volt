@@ -1,9 +1,9 @@
-import { useSelector } from "react-redux";
-import { selectTaskCount } from "../../redux/selectors";
-import { Typography } from "@mui/material";
+import { useSelector } from 'react-redux'
+import { selectTaskCount } from '../../redux/selectors'
+import { Typography } from '@mui/material'
 
 export const TaskCounter = () => {
-  const { active, completed } = useSelector(selectTaskCount);
+  const { active, completed } = useSelector(selectTaskCount)
 
   return (
     <div>
@@ -11,5 +11,5 @@ export const TaskCounter = () => {
       <p>Active: {active}</p>
       <p>Completed: {completed}</p>
     </div>
-  );
-};
+  )
+}

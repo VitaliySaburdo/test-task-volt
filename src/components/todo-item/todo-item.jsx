@@ -17,7 +17,7 @@ export const Task = ({ task }) => {
       <Checkbox
         checked={task.completed}
         onChange={handleToggle}
-        sx={{ '& .MuiSvgIcon-root': { fontSize: 28 } }}
+        sx={{ '& .MuiSvgIcon-root': { 'fontSize': 28 } }}
       />
       <Text>{task.text}</Text>
       <MuiButton
