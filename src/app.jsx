@@ -26,7 +26,7 @@ function App() {
         <main>
           <Section>
             <>
-              <h1 style={{textAlign: 'center'}}>TODO APP</h1>
+              <h1 style={{ 'textAlign': 'center' }}>TODO APP</h1>
               <ToDoForm />
               {isLoading && !error && <Loader/>}
               <ToDoList />
