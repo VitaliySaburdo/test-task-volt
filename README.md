@@ -32,13 +32,16 @@ Your app is ready to be deployed!
 ## Technologies
 The following libraries and technologies are used in the project:
 
-react
-react-redux
-reduxjs/toolkit
-react-loader-spinner
-axios
-styled-components
-mui/material
-formik
-yup
+- react
+- react-redux
+- reduxjs/toolkit
+- react-loader-spinner
+- axios
+- styled-components
+- mui/material
+- formik
+- yup
 
+## Backend
+
+This application uses a backend mockapi.io
